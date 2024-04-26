@@ -1,4 +1,6 @@
-import suzuki from "./user.js";
+import user from "./user.js";
 
-console.log('hello, world.');
-console.log({suzuki})
+console.log(user.suzuki)
+console.log(user.addOne(1))
+console.log(user.yamada.name)
+console.log({user})
