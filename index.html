@@ -6,7 +6,32 @@
   <title>Document</title>
 </head>
 <body>
-  <p>テストページ</p>
-  <script src="./index.js" type="module"></script>
+  <h1>テストページ</h1>
+  <!-- ここでテンプレートを定義 -->
+  <template id="my-paragraph">
+    <style>
+      p {
+        color: white;
+        background-color: #666;
+        padding: 5px;
+      }
+    </style>
+    <!-- 「my-text」という名前でスロットを配置 -->
+    <!-- slotタグの場所に任意のタグを代入できるようになる -->
+    <p><slot name="my-text">デフォルトの文言を設定</slot></p>
+  </template>
+  <!-- ここでテンプレートを使う -->
+  <my-paragraph>
+    <span slot="my-text">スロットに代入したいテキスト</span>
+  </my-paragraph>
+  <my-paragraph>
+    <ul slot="my-text">
+      <li>リストも</li>
+      <li>スロットに</li>
+      <li>代入することが可能</li>
+    </ul>
+  </my-paragraph>
+  <script src="./define.js" type="module"></script>
+  <!-- <script src="./index.js" type="module"></script> -->
 </body>
 </html>

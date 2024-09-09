@@ -1,0 +1,9 @@
+hello-world {
+  /* 無視される */
+  color: red;
+}
+
+hello-world p {
+  /* 無視される */
+  background-color: red;
+}
